@@ -38,6 +38,18 @@ def compute_ln_norm_distance(vector1, vector2, n):
     return ln_norm_distance
 ```
 ```python3
+#computing distance between categorical data
+def compute_hamming_distance(vector1, vector2):
+    vector_len = len(vector1)
+    hamming_distance = 0
+
+    for i in range(0, vector_len):
+      if(vector1[i] != vector2[i]):
+        hamming_distance += 1 
+
+    return hamming_distance
+```
+```python3
 #finding K Nearest neigbour of the test Example
 def find_k_nearest_neighbors(train_X, test_example, k, n_in_ln_norm_distance):
     indices_dist_pairs = []
